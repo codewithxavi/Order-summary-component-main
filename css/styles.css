@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+
+  --bg-body: #e0e8ff;
+  --bg-card: white;
+  --title-card: #1f2f56;
+  --bg-cta: #3829e0;
+  --cta-change: #7761ff;
+  --cancel-order: #7f88a9;
+  --text-card: #3f4d61;
+  --cta-box-shadow: #dfd8ff;
+  --card-box-shadow: #c5d1f7;
+  --bg-plan: #f8f9fe;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+  background-color: var(--bg-body);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+  margin: 0;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+
+}
+
+.card {
+  background-color: var(--bg-card);
+  border-radius: 1em;
+  margin: 20px;
+  max-width: 375px;
+  z-index: 1;
+  box-shadow: 0 10px #dce3ff;
+}
+
+.card__header {
+  min-height: 15vh;
+  background-image: url(../images/illustration-hero.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1em 1em 0 0;
+}
+
+.card__title {
+  font-weight: 900;
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.card__text {
+  color: var(--text-card);
+  text-align: center;
+  margin: auto;
+  font-size: .9em;
+  padding: 0 1.8em;
+  line-height: 1.7;
+}
+
+.card__plan {
+  background-color: var(--bg-plan);
+  border-radius: .5em;
+  padding: 1em 1em;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5em;
+  margin: 1.5em 2em;
+}
+
+.plan__conditions>* {
+  margin: 0;
+}
+
+.plan__title {
+  font-size: .9em;
+  color: var(--title-card);
+}
+
+.plan__price {
+  color: var(--text-card);
+}
+
+.card__change {
+  align-self: center;
+  font-size: 0.8em;
+  margin-left: 1em;
+  color: #3829e0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card__change:hover {
+  text-decoration: none;
+}
+
+.card__cta__payment {
+  display: block;
+  margin: auto;
+  background-color: var(--bg-cta);
+  color: white;
+  padding: 1em 5.4em;
+  border-radius: .7em;
+  outline: 0;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0 10px #ebe6ff;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.card__cta__payment:hover {
+  background-color: #7699ff;
+}
+
+.card__cancel {
+  display: block;
+  text-align: center;
+  margin: 2em 0 2.5em 0;
+  color: #838383;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card__cancel:hover {
+  color: rgb(1, 1, 42);
+}
+
+@media (min-width: 700px) {
+  .card__change {
+    margin-left: 3em;
+  }
+
+  .card__header {
+    min-height: 20vh;
+  }
+}
